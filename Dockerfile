@@ -8,7 +8,7 @@ chmod +x lip-${lip_version}-linux-amd64/lip && \
 mkdir bedrock_server && \
 cd bedrock_server && \
 ../lip-${lip_version}-linux-amd64/lip install -y bds && \
-../lip-${lip_version}-linux-amd64/lip install ll && \
+../lip-${lip_version}-linux-amd64/lip install liteloaderbds && \
 WINEDEBUG=-all wine LLPeEditor.exe && \
 rm ../lip-${lip_version}-linux-amd64.tar.gz && \
 rm ~/.wine
