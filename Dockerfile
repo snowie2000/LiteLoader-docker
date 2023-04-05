@@ -10,7 +10,8 @@ cd bedrock_server && \
 ../lip-${lip_version}-linux-amd64/lip install -y bds && \
 ../lip-${lip_version}-linux-amd64/lip install ll && \
 WINEDEBUG=-all wine LLPeEditor.exe && \
-rm ../lip-${lip_version}-linux-amd64.tar.gz
+rm ../lip-${lip_version}-linux-amd64.tar.gz && \
+rm ~/.wine
 COPY entrypoint.sh /
 WORKDIR /server
 ENV WINEDEBUG=-all
