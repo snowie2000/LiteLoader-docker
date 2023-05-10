@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -d "/server_prebuilt" ]; then
-    mv /server_prebuilt/* /server/
+    cp /server_prebuilt/* /server/ -r -f
     rm -r /server_prebuilt
 fi
 cd /server/bedrock_server
