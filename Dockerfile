@@ -3,7 +3,7 @@ RUN apk add --no-cache wine libc6-compat wget
 ARG lip_version=0.14.0
 ARG lip_url="https://github.com/LipPkg/Lip/releases/latest"
 WORKDIR /server_prebuilt
-RUN latest_version=$(curl --silent --head $url | grep -i location | awk -F '/' '{print $NF}' | tr -d '\r\n' | sed 's/^v//') && \
+RUN latest_version=$(curl --silent --head ${url} | grep -i location | awk -F '/' '{print $NF}' | tr -d '\r\n' | sed 's/^v//') && \
 wget https://github.com/LiteLDev/Lip/releases/download/v${latest_version}/lip-${latest_version}-linux-amd64.tar.gz && \
 tar -xvf lip-${latest_version}-linux-amd64.tar.gz && \
 chmod +x lip-${latest_version}-linux-amd64/lip && \
